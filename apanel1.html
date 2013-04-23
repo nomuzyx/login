@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+	Admin Panel
+</title>	
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+	<script>
+    function validateForm()
+	{
+		var muser    =document.forms["apanelfrm"]["username"].value;
+		var mdatabase=document.forms["apanelfrm"]["databasename"].value;
+		if (muser==null || muser=="")
+  		{
+  		alert("Username must be filled out");
+  		document.getElementById('username').focus();
+  		return false;
+  		}
+  		if (mdatabase==null || mdatabase=="")
+  		{
+  		alert("Database must be filled out");
+  		document.getElementById('databasename').focus();
+  		return false;
+  		}
+	}
+  
+	</script>	
+</head>
+<body>
+<div class="container">    
+    <div class="row" style="padding:1%;background-color:cadetblue;">	    
+		<div class="span9 offset1" style="background-color:white;">
+			<form name="apanelfrm" class="form-action" action="submitrecd.html" target="_blank"style="margin:4%;" onsubmit="return validateForm()" method="get">
+				<h4>Admin Panel</h4>
+	        	<p><input type="text" size="30" id="username" value="" placeholder="Username"></p>
+	       		<p><input type="password" size="30" id="password" value="" placeholder="Password"></p>
+	       		<p><input class="span5" type="text" size="50" id="compyname" value="" placeholder="Company"></p>
+	       		<p>
+	       		<textarea rows=3 class="span5">	
+	       		</textarea>	
+	       		</p>
+	       		<p><input  class="span5" type="text" size="30" id="contactno" value="" placeholder="Contact No."></p>
+	       		<p><input class="span5" type="text" size="50" id="tagline" value="" placeholder="Tag Line"></p>
+	       		<p><input class="span5" type="email" size="50" id="email" value="" placeholder="E-mail"></p>
+                <p><input type="text" size="30" id="databasename" value="" placeholder="Database Name"></p>
+                <p>From Date</p>  
+                <p><input type="date" id="fromdate" value="" placeholder="From Date"></p>
+                <p>To Date</p>  
+                <p><input type="date" id="todate" value="" placeholder="To Date"></p>
+	       		<button class="btn btn-success btn-small" type="submit">Create</button>
+	       	</form>	
+	    </div>
+	    <div class="span2">
+	         
+	    </div>
+	</div>    
+</div>
+</body>
+</html>
